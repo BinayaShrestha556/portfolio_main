@@ -43,7 +43,7 @@ const TechStack = () => {
         <div className="flex flex-col gap-2">
           <Card src="/nodejs.svg" className="  h-72 object-contain">
             <p className="text-small">
-              Node.js is a JavaScript runtime built on Chrome's V8 engine that
+              Node.js is a JavaScript runtime built on Chromes V8 engine that
               enables server-side development, offering scalability and
               asynchronous, non-blocking event-driven architecture.
             </p>{" "}

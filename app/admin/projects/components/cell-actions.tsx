@@ -12,7 +12,7 @@ import { ProductColumns } from "./columns";
 import { Button } from "@/components/ui/button";
 import { Copy, Delete, Edit, MoreHorizontal } from "lucide-react";
 import toast from "react-hot-toast";
-import { useParams, useRouter } from "next/navigation";
+import {  useRouter } from "next/navigation";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -27,21 +27,19 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
     toast.success("Id Copied");
   };
   const router=useRouter()
-  const params=useParams()
-  const [loading,setLoading]=useState(false);
-  const [open,setOpen]=useState(false);
+
+
   const onDelete = async () => {
-    try {
-      setLoading(true);
+    try{
       await axios.delete(`/api/project/${data.id}`);
       router.refresh();
       router.push(`/admin/projects`);
       toast.success("deleted");
-    } catch (error) {
+    } catch (err) {
+      console.log(err);
       toast.error("error");
     } finally {
-      setLoading(false);
-      setOpen(false);
+
     }
   };
   const [mounted,setMounted]=useState(false)

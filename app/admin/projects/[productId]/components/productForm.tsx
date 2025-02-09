@@ -1,15 +1,13 @@
 "use client";
 import * as z from "zod";
-import { Button } from "@/components/ui/button";
-
-import { Trash } from "lucide-react";
+import { Button } from "@/components/ui/button"
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useState } from "react";
 import {
   Form,
   FormControl,
-  FormDescription,
+
   FormField,
   FormItem,
   FormLabel,
@@ -18,9 +16,9 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 import toast from "react-hot-toast";
-import axios from "axios";
+
 import { useParams } from "next/navigation";
-import { useRouter } from "next/navigation";
+
 
 import ImageUpload from "@/components/ui/image-upload";
 import { Images, Project } from "@prisma/client";
@@ -66,7 +64,7 @@ const ProductsForm: React.FC<ProductsFormProps> = ({ initialData }) => {
   });
   const params = useParams();
 
-  const router = useRouter();
+
   const onSubmit = async (data: ProductsFormValues) => {
     try {
       setLoading(true);
@@ -87,6 +85,7 @@ const ProductsForm: React.FC<ProductsFormProps> = ({ initialData }) => {
         toast(res);
       }
     } catch (error) {
+      console.log(error);
       toast.error("something went wrong");
     } finally {
       setLoading(false);

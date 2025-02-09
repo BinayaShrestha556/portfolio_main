@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
 import { Plus } from "lucide-react"
-import { useParams, useRouter } from "next/navigation"
+import {  useRouter } from "next/navigation"
 import { ProductColumns, columns } from "./columns"
 import { DataTable } from "@/components/ui/data-table"
 
@@ -14,7 +14,7 @@ interface ProductProps{
 }
 const ProductClient: React.FC<ProductProps> = ({data}) => {
     const router = useRouter()
-    const params= useParams()
+
 
   return (
     <>

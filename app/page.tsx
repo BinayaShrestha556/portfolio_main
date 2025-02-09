@@ -1,5 +1,5 @@
 import About from '@/components/about'
-import Reveal from '@/components/animated-components/reveal'
+
 import Hero from '@/components/hero'
 import Projects from '@/components/projects'
 import TechStack from '@/components/tech-stack'

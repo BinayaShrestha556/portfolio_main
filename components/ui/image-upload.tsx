@@ -35,7 +35,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
   useEffect(() => {
     // Sync the local state with the parent's value
     setUploadedUrls(value);
-  }, []);
+  }, [value]);
 
   useEffect(() => {
     // Notify the parent component of the updated URLs
