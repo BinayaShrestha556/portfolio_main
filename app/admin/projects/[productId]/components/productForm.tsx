@@ -51,6 +51,7 @@ const ProductsForm: React.FC<ProductsFormProps> = ({ initialData }) => {
       ? {
           ...initialData,
           images: initialData.images || [],
+          password:"",
         }
       : {
           title: "",
@@ -80,8 +81,7 @@ const ProductsForm: React.FC<ProductsFormProps> = ({ initialData }) => {
         toast(res);
       } else {
         const res = await addProjects(data);
-        console.log(data);
-        console.log(res);
+      
         toast(res);
       }
     } catch (error) {

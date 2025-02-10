@@ -1,24 +1,17 @@
-import prismadb from "@/lib/db"
+
 import ProductClient from "./components/client"
 import {format} from "date-fns"
 
 import { ProductColumns } from "./components/columns"
+import { Project } from "@prisma/client"
+
 
 
 const Products = async () => {
 
-  const projects=await prismadb.project.findMany({
-    where:{
-      
-    },
-    include:{
-   images:true
-    },
-    orderBy:{
-      createdAt:"desc"
-    }
-  })
-  const formattedProjects:ProductColumns[]=projects.map((e)=>(
+  const data=await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`,{cache:"no-store"})
+  const projects=await data.json()
+  const formattedProjects:ProductColumns[]=projects.map((e:Project)=>(
     {
       id:e.id,
       title:e.title,

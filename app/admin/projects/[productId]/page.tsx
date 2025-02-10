@@ -1,4 +1,4 @@
-import prismadb from "@/lib/db";
+
 import ProductsForm from "./components/productForm";
 
 const ProductPage = async ({
@@ -10,22 +10,16 @@ const ProductPage = async ({
   }>;
 }) => {
   const {productId}=await params
-  const product = await prismadb.project.findUnique({
-    where: {
-      id:productId,
-    },
-    include: {
-      images: true,
-  
-    },
-  });
+  const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products/${productId}`,{cache:"no-store"});
+  const project= await data.json()
+
 
 
   return (
     <div className="flex-col w-[80%] mx-auto">
       <div className="flex-1 space-y-4 p-8 pt-6">
         <ProductsForm
-         initialData={product} />
+         initialData={project[0]} />
       </div>
     </div>
   );
