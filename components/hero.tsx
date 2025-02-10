@@ -24,7 +24,7 @@ const Hero = () => {
         </div>
         
         <Reveal>
-          <p className="tracking-[5px]">BINAYA SHRESTHA</p>
+          <h1 className="tracking-[4px] text-lg font-bold">BINAYA SHRESTHA</h1>
         </Reveal>
         </div>
         <div className=" w-2/3 md:w-1/2">

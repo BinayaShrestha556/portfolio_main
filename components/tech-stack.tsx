@@ -5,7 +5,7 @@ import Reveal from "./animated-components/reveal";
 const TechStack = () => {
   return (
     <div id="tech_stacks" className="lg:w-[80%] md:w-[90%] w-full mt-10  flex flex-col pt-10 justify-center p-1 m-auto">
-      <Reveal>TECH STACKS</Reveal>
+      <Reveal><h1 className="tracking-[4px] text-lg font-bold">TECH STACKS</h1></Reveal>
       <div className="my-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 ">
         <div className="flex-col flex  gap-2">
           <Card src="/next.webp" className="h-96  ">

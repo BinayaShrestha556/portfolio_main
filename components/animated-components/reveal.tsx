@@ -11,7 +11,7 @@ const Reveal:React.FC<RevealProps> = ({children,width}) => {
   useEffect(() => {
     isMounted(true);
   }, []);
-  if (!mounted) return ;
+  if (!mounted) return <div className="w-full px-2 py-0.5">{children}</div>;
   return (
     <div className={cn(`relative z-0 overflow-hidden w-fit`,width)}>
       <div className="w-full px-2 py-0.5"> {children} </div>

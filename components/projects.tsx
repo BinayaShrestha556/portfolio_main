@@ -5,31 +5,27 @@ import Reveal from "./animated-components/reveal";
 import { Button } from "./ui/button";
 import prismadb from "@/lib/db";
 import Link from "next/link";
+import { Images, Project } from "@prisma/client";
+interface Projects extends Project{
+  images:Images[]
+}
 const Projects = async () => {
-  const projects = await prismadb.project.findMany({
-    orderBy:{
- priority:"desc"
-    },
-    include: {
-      images: true,
-    },
-  
-    
-  });
+  const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`,{cache:"no-store"})
+  const projects=await data.json()
 
   return (
     <div id="projects" className="pt-10 w-full min-h-full  mx-auto flex flex-col items-center justify-center">
       <div className="xl:w-[80%] mb-2 md:w-[90%] w-full">
         <Reveal>
-          <p className="tracking-[5px]">PROJECTS</p>
+          <h1 className="tracking-[4px] text-lg font-bold">PROJECTS</h1>
         </Reveal>
       </div>
-      {projects.map((e) => (
+      {projects.map((e:Projects) => (
         <div
           key={e.title}
           className="xl:w-[80%] md:w-[90%] w-full flex flex-col gap-4 xl:h-96 lg:h-80  items-stretch lg:flex-row"
         >
-          <EmblaCarousel className="h-96" images={e.images.map((e) => e.url)} />
+          <EmblaCarousel className="h-96" images={e.images.map((e:Images) => e.url)} />
           <div className="w-full flex gap-3 flex-col justify-center ">
             <Reveal>
               <h1 className="text-3xl font-bold -ml-2">{e.title}</h1>

@@ -9,9 +9,9 @@ const About = () => {
       <div className="md:w-[80%] w-full gap-4  md:flex-row flex-col-reverse mt-10 flex md:gap-2 m-auto ">
         <div  className=" w-full md:w-[60%] h-fit">
           <Reveal>
-            <p  className="-ml-1 tracking-[5px]">
+            <h1  className="-ml-1 tracking-[4px] text-lg font-bold ">
               ABOUT ME
-            </p>
+           </h1>
           </Reveal>
           <BigDescription className="text-left text-xl md:text-3xl  lg:text-4xl xl:text-5xl w-full">
             Highly motivated and{" "}
