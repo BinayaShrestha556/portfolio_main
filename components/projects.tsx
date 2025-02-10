@@ -3,7 +3,7 @@ import React from "react";
 import EmblaCarousel from "./ui/carousel";
 import Reveal from "./animated-components/reveal";
 import { Button } from "./ui/button";
-import prismadb from "@/lib/db";
+
 import Link from "next/link";
 import { Images, Project } from "@prisma/client";
 interface Projects extends Project{
