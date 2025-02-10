@@ -15,7 +15,7 @@ interface Values{
 }
 const addProjects=async(values:Values)=>{
  try {
-    if(values.password==="binayaisthebaddestmfintheentireworld"){
+    if(values.password===process.env.PASSWORD){
        await prismadb.project.create({
            data:{
                title:values.title,

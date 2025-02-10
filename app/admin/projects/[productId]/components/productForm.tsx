@@ -144,11 +144,11 @@ const ProductsForm: React.FC<ProductsFormProps> = ({ initialData }) => {
               name="title"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>Title</FormLabel>
                   <FormControl>
                     <Input
                       disabled={loading}
-                      placeholder="Product name"
+                      placeholder="title of project"
                       {...field}
                     />
                   </FormControl>
@@ -167,7 +167,7 @@ const ProductsForm: React.FC<ProductsFormProps> = ({ initialData }) => {
                       rows={5}
                       className="border-border min-w-60 border bg-transparent"
                       disabled={loading}
-                      placeholder="Product name"
+                      placeholder="Type something"
                       {...field}
                     />
                   </FormControl>
@@ -184,7 +184,7 @@ const ProductsForm: React.FC<ProductsFormProps> = ({ initialData }) => {
                   <FormControl>
                     <Input
                       disabled={loading}
-                      placeholder="Product name"
+                      placeholder="url"
                       {...field}
                     />
                   </FormControl>
@@ -201,7 +201,7 @@ const ProductsForm: React.FC<ProductsFormProps> = ({ initialData }) => {
                   <FormControl>
                     <Input
                       disabled={loading}
-                      placeholder="Product name"
+                      placeholder="url"
                       {...field}
                     />
                   </FormControl>
@@ -216,9 +216,9 @@ const ProductsForm: React.FC<ProductsFormProps> = ({ initialData }) => {
                 <FormItem>
                   <FormLabel>password</FormLabel>
                   <FormControl>
-                    <Input
+                    <Input type="password"
                       disabled={loading}
-                      placeholder="Product name"
+                      placeholder="password"
                       {...field}
                     />
                   </FormControl>
