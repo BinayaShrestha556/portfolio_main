@@ -17,7 +17,7 @@ const TechStack = () => {
             </p>{" "}
           </Card>
           <Card src="/typescript.png" className="h-24 ">
-            <p className="text-sm">
+            <p className="text-xs lg:text-sm lg:leading-normal leading-tight">
               A superset of JavaScript that adds static typing, making it easier
               to catch errors and build scalable applications.
             </p>{" "}
@@ -48,31 +48,31 @@ const TechStack = () => {
               asynchronous, non-blocking event-driven architecture.
             </p>{" "}
           </Card>
-          <Card src="/prisma.jpg" className="h-48">
-            <p className="text-sm">
+          <Card src="/prisma.jpg" className="md:h-48 h-24">
+            <p className="text-xs lg:text-sm lg:leading-normal leading-tight">
               Prisma is a modern ORM tool for Node.js and TypeScript that
               simplifies database access with a type-safe and intuitive API,
               supporting SQL and NoSQL databases.
             </p>{" "}
           </Card>
         </div>
-        <div className="grid grid-flow-row md:grid-flow-col md:grid-cols-3 md:col-span-3 md:h-28 lg:h-auto lg:col-span-1 lg:grid-flow-row lg:grid-cols-1  gap-2">
+        <div className="grid grid-flow-row md:grid-flow-col h-80 md:grid-cols-3 md:col-span-3 md:h-28 lg:h-auto lg:col-span-1 lg:grid-flow-row lg:grid-cols-1  gap-2">
           <Card src="/sql.jpeg" className="   object-contain">
-            <p className="text-sm">
+            <p className="text-xs lg:text-sm lg:leading-normal leading-tight">
               SQL is a standardized programming language used to manage, query,
               and manipulate relational databases by working with tables, rows,
               and columns.
             </p>{" "}
           </Card>
           <Card src="/postgresql.png" className="bg-slate-400/30 ">
-            <p className="text-sm">
+            <p className="text-xs lg:text-sm lg:leading-normal leading-tight">
               PostgreSQL is a powerful, open-source relational database
               management system known for its reliability, extensibility, JSON,
               and custom data types.
             </p>{" "}
           </Card>
           <Card src="/mongodb.jpg" className="">
-            <p className="text-sm">
+            <p className="text-xs lg:text-sm lg:leading-normal leading-tight">
               MongoDB is a popular NoSQL database that stores data in flexible,
               JSON-like documents, making it ideal for handling unstructured or
               semi-structured data and scaling horizontally.
