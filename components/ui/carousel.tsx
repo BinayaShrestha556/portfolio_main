@@ -7,7 +7,7 @@ import Autoplay from 'embla-carousel-autoplay'
 import { cn } from '@/lib/utils';
 
  const EmblaCarousel = ({images,className}:{images:string[],className:string}) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({loop:true},[Autoplay({delay:3000})])
+  const [emblaRef, emblaApi] = useEmblaCarousel({loop:true},[Autoplay({delay:Math.floor(Math.random() * (4000 - 3000 + 1)) + 3000})])
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev()
