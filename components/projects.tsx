@@ -14,7 +14,7 @@ const Projects = async () => {
   const projects=await data.json()
 
   return (
-    <div id="projects" className="pt-10 w-full min-h-full  mx-auto flex flex-col items-center justify-center">
+    <div id="projects" className="pt-10 w-full min-h-full  mx-auto flex gap-5 flex-col items-center justify-center">
       <div className="xl:w-[80%] mb-2 md:w-[90%] w-full">
         <Reveal>
           <h1 className="tracking-[4px] text-lg font-bold">PROJECTS</h1>
