@@ -12,7 +12,7 @@ const page =async () => {
     const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`,{cache:"no-store"})
     const projects=await data.json()
   return (
-    <div className="w-full min-h-full flex flex-col justify-center p-3 ">
+    <div className="w-full min-h-full flex gap-6 flex-col justify-center p-3 ">
     <div className="xl:w-[80%] mb-2 md:w-[90%] m-auto pt-20  w-full">
     <Reveal>
       <p className="tracking-[5px]">PROJECTS</p>

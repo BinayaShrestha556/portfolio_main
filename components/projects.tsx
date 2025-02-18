@@ -23,7 +23,7 @@ const Projects = async () => {
       {projects.map((e:Projects) => (
         <div
           key={e.title}
-          className="xl:w-[80%] md:w-[90%] w-full flex flex-col gap-4 xl:h-96 lg:h-80  items-stretch lg:flex-row"
+          className="xl:w-[80%] md:w-[90%] w-full flex flex-col gap-6 xl:h-96 lg:h-80  items-stretch lg:flex-row"
         >
           <EmblaCarousel className="h-96" images={e.images.map((e:Images) => e.url)} />
           <div className="w-full flex gap-3 flex-col justify-center ">
