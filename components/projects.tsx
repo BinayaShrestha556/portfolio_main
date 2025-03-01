@@ -22,6 +22,7 @@ const Projects = async () => {
             <h2 className="text-muted-foreground">Some of my curated works</h2>
           </Reveal>
           <ProjectCard
+            n={0}
             description={ProjectsData[1].description}
             images={ProjectsData[1].images}
             name={ProjectsData[1].name}
@@ -34,6 +35,7 @@ const Projects = async () => {
         </div>
         <div className="flex flex-col flex-1 gap-20">
           <ProjectCard
+            n={1}
             description={ProjectsData[0].description}
             images={ProjectsData[0].images}
             name={ProjectsData[0].name}
@@ -44,6 +46,7 @@ const Projects = async () => {
             github_front={ProjectsData[0].github_front}
           />
           <ProjectCard
+            n={2}
             description={ProjectsData[2].description}
             images={ProjectsData[2].images}
             name={ProjectsData[2].name}

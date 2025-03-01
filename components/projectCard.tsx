@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-const ProjectCard: React.FC<Projects> = (e) => {
+const ProjectCard: React.FC<Projects & { n?: 1 | 2 | 3 | 0 }> = (e) => {
   const bgs = [
     "hsla(319, 88%, 50%, 0.5)", // #9E0A56
     "hsla(226, 64%, 50%, 0.5)", // #1A2F79
@@ -14,7 +14,8 @@ const ProjectCard: React.FC<Projects> = (e) => {
     "hsla(164, 85%, 50%, 0.5)", // #0A845B (same as above)
   ];
   const randomNum = Math.floor(Math.random() * 4);
-  const bg = bgs[randomNum];
+  console.log(e.n);
+  const bg = e.n !== undefined ? bgs[e.n] : bgs[randomNum];
 
   return (
     <div
