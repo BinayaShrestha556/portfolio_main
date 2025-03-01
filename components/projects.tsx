@@ -1,61 +1,70 @@
-export const revalidate=0
+export const revalidate = 0;
 import React from "react";
-import EmblaCarousel from "./ui/carousel";
+
 import Reveal from "./animated-components/reveal";
-import { Button } from "./ui/button";
 
+import { ProjectsData, Projects as Project } from "@/data";
 import Link from "next/link";
-import { Images, Project } from "@prisma/client";
-interface Projects extends Project{
-  images:Images[]
-}
-const Projects = async () => {
-  const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`,{cache:"no-store"})
-  const projects=await data.json()
+import ProjectCard from "./projectCard";
+import { FaArrowRight } from "react-icons/fa";
 
+const Projects = async () => {
   return (
-    <div id="projects" className="pt-10 w-full min-h-full  mx-auto flex gap-5 flex-col items-center justify-center">
-      <div className="xl:w-[80%] mb-2 md:w-[90%] w-full">
-        <Reveal>
-          <h1 className="tracking-[4px] text-lg font-bold">PROJECTS</h1>
-        </Reveal>
-      </div>
-      {projects.map((e:Projects) => (
-        <div
-          key={e.title}
-          className="xl:w-[80%] md:w-[90%] w-full flex flex-col gap-6 xl:h-96 lg:h-80  items-stretch lg:flex-row"
-        >
-          <EmblaCarousel className="h-96" images={e.images.map((e:Images) => e.url)} />
-          <div className="w-full flex gap-3 flex-col justify-center ">
-            <Reveal>
-              <h1 className="text-3xl font-bold -ml-2">{e.title}</h1>
-            </Reveal>
-            <p className="text-xl ">{e.description}</p>
-            <div className="flex w-full gap-2">
-              <Link href={e.liveWebsiteUrl}>
-                <Button
-                  size={"lg"}
-                  variant="default"
-                  className="rounded-[3px] text-white"
-                >
-                  Live Website
-                </Button>
-              </Link>
-              <Link href={e.sourceCodeUrl}>
-                {" "}
-                <Button
-                  variant={"secondary"}
-                  size={"lg"}
-                  className="rounded-[3px] text-white"
-                >
-                  source code
-                </Button>
-              </Link>
-            </div>
-          </div>
+    <div
+      id="projects"
+      className="pt-10  min-h-full xl:w-[80%] mb-2 md:w-[90%] w-full  mx-auto flex gap-5 flex-col items-center justify-center"
+    >
+      <div className=" w-full"></div>
+      <div className="flex w-full items-stretch gap-20">
+        <div className="flex flex-col flex-1 justify-center">
+          <Reveal className="justify-self-start mt-5 ml-5 -mb-24">
+            <h1 className=" text-2xl font-bold">PROJECTS</h1>
+            <h2 className="text-muted-foreground">Some of my curated works</h2>
+          </Reveal>
+          <ProjectCard
+            description={ProjectsData[1].description}
+            images={ProjectsData[1].images}
+            name={ProjectsData[1].name}
+            techStack={ProjectsData[1].techStack}
+            github={ProjectsData[1].github}
+            liveUrl={ProjectsData[1].liveUrl}
+            github_back={ProjectsData[1].github_back}
+            github_front={ProjectsData[1].github_front}
+          />
         </div>
-      ))}
-    <div className="xl:w-[80%] mb-2 md:w-[90%] w-full mt-5 "><Link href="/projects" className="self-start "><Button className="rounded-[3px] text-white font-bold" size={"lg"}>View all projects</Button></Link></div>
+        <div className="flex flex-col flex-1 gap-20">
+          <ProjectCard
+            description={ProjectsData[0].description}
+            images={ProjectsData[0].images}
+            name={ProjectsData[0].name}
+            techStack={ProjectsData[0].techStack}
+            github={ProjectsData[0].github}
+            liveUrl={ProjectsData[0].liveUrl}
+            github_back={ProjectsData[0].github_back}
+            github_front={ProjectsData[0].github_front}
+          />
+          <ProjectCard
+            description={ProjectsData[2].description}
+            images={ProjectsData[2].images}
+            name={ProjectsData[2].name}
+            techStack={ProjectsData[2].techStack}
+            github={ProjectsData[2].github}
+            liveUrl={ProjectsData[2].liveUrl}
+            github_back={ProjectsData[2].github_back}
+            github_front={ProjectsData[2].github_front}
+          />
+        </div>
+      </div>
+
+      <div className=" w-full mt-5 ">
+        <Link
+          prefetch={false}
+          href="/projects"
+          className="self-start w-fit flex items-center gap-2 text-2xl font-bold text-primary hover:underline"
+        >
+          View All Projects <FaArrowRight />
+        </Link>
+      </div>
     </div>
   );
 };

@@ -1,112 +1,41 @@
 import React from "react";
-import Card from "./ui/card";
 import Reveal from "./animated-components/reveal";
+import { TechStack as TechStacks } from "@/data";
 
 const TechStack = () => {
   return (
-    <div id="tech_stacks" className="lg:w-[80%] md:w-[90%] w-full mt-10  flex flex-col pt-10 justify-center p-1 m-auto">
-      <Reveal><h1 className="tracking-[4px] text-lg font-bold">TECH STACKS</h1></Reveal>
-      <div className="my-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 ">
-        <div className="flex-col flex  gap-2">
-          <Card src="/next.webp" className="h-96  ">
-            {" "}
-            <p className="text-sm">
-              Next.js is a powerful React framework that enables server-side
-              rendering, static site generation, and seamless API integration
-              for building modern web applications.{" "}
-            </p>{" "}
-          </Card>
-          <Card src="/typescript.png" className="h-24 ">
-            <p className="text-xs lg:text-sm lg:leading-normal leading-tight">
-              A superset of JavaScript that adds static typing, making it easier
-              to catch errors and build scalable applications.
-            </p>{" "}
-          </Card>
-        </div>
-        <div className="flex-col flex  gap-2">
-          <Card src="/react.png" className="  h-60">
-            <p className="text-sm">
-              React is a JavaScript library for building interactive and dynamic
-              user interfaces, focusing on component-based architecture and
-              efficient rendering with a virtual DOM.
-            </p>{" "}
-          </Card>
-          <Card src="/express.png" className="  h-60">
-            {" "}
-            <p className="text-small">
-              Express is a fast and minimal Node.js web application framework
-              that simplifies building APIs and web servers with robust routing
-              and middleware support.
-            </p>
-          </Card>
-        </div>
-        <div className="flex flex-col gap-2">
-          <Card src="/nodejs.svg" className="  h-72 object-contain">
-            <p className="text-small">
-              Node.js is a JavaScript runtime built on Chromes V8 engine that
-              enables server-side development, offering scalability and
-              asynchronous, non-blocking event-driven architecture.
-            </p>{" "}
-          </Card>
-          <Card src="/prisma.jpg" className="md:h-48 h-24">
-            <p className="text-xs lg:text-sm lg:leading-normal leading-tight">
-              Prisma is a modern ORM tool for Node.js and TypeScript that
-              simplifies database access with a type-safe and intuitive API,
-              supporting SQL and NoSQL databases.
-            </p>{" "}
-          </Card>
-        </div>
-        <div className="grid grid-flow-row md:grid-flow-col h-80 md:grid-cols-3 md:col-span-3 md:h-28 lg:h-auto lg:col-span-1 lg:grid-flow-row lg:grid-cols-1  gap-2">
-          <Card src="/sql.jpeg" className="   object-contain">
-            <p className="text-xs lg:text-sm lg:leading-normal leading-tight">
-              SQL is a standardized programming language used to manage, query,
-              and manipulate relational databases by working with tables, rows,
-              and columns.
-            </p>{" "}
-          </Card>
-          <Card src="/postgresql.png" className="bg-slate-400/30 ">
-            <p className="text-xs lg:text-sm lg:leading-normal leading-tight">
-              PostgreSQL is a powerful, open-source relational database
-              management system known for its reliability, extensibility, JSON,
-              and custom data types.
-            </p>{" "}
-          </Card>
-          <Card src="/mongodb.jpg" className="">
-            <p className="text-xs lg:text-sm lg:leading-normal leading-tight">
-              MongoDB is a popular NoSQL database that stores data in flexible,
-              JSON-like documents, making it ideal for handling unstructured or
-              semi-structured data and scaling horizontally.
-            </p>{" "}
-          </Card>
-        </div>
-        <div className="md:grid hidden lg:grid-cols-4  grid-cols-2 lg:h-24 xl:h-auto md:h-48 xl:grid-cols-1 xl:col-span-1 gap-2 col-span-2 lg:col-span-4 ">
-          <Card src="/shadcnui.png" className=" ">
-            <p className="text-sm">
-              ShadCN UI is a customizable component library for React apps,
-              designed with modern styling and flexibility in mind.
-            </p>{" "}
-          </Card>
-          <Card src="/zod.png" className=" bg-white/5  ">
-            {" "}
-            <p className="text-sm">
-              Zod is a TypeScript-first library for schema validation with
-              strong type inference.
-            </p>{" "}
-          </Card>
-          <Card src="/nextauth.png" className=" ">
-            <p className="text-sm">
-              NextAuth.js is an authentication library for Next.js, supporting
-              multiple providers and session management.
-            </p>{" "}
-          </Card>
-          <Card src="/passport.png" className="">
-            <p className="text-sm">
-              Passport.js is an authentication middleware for Node.js,
-              supporting a wide range of strategies for user login.
-            </p>{" "}
-          </Card>
-        </div>
-      </div>
+    <div className="w-[70%] m-auto h-[80vh] flex flex-col gap-8 items-center justify-center">
+      <Reveal className="text-2xl font-bold self-start">
+        <h1>TECH STACK</h1>
+      </Reveal>
+      <section className="w-full flex flex-col gap-4">
+        {TechStacks.map((e) => (
+          <div key={e.title} className="w-full flex flex-col items-center">
+            <h2 className="my-4 font-bold">{e.title}</h2>
+            <div className="flex gap-4 ">
+              {" "}
+              {e.techStack.map((e) => (
+                <div key={e.title} className="group relative h-fit">
+                  <button className="flex gap-2 shadow-inner shadow-white/[0.07] rounded hover:bg-primary  transition hover:text-black bg-secondary px-3.5 py-2.5 font-semibold">
+                    <e.icon className="w-6 h-6 text-primary duration-300 transition group-hover:text-black" />
+                    {e.title}
+                  </button>
+
+                  {/* Dropdown should be inside the same group */}
+
+                  <div className="absolute opacity-0 group-hover:opacity-100 transition  w-40 top-[115%] rounded bg-white/5 shadow-inner shadow-white/10 backdrop-blur-lg  text-white text-sm   z-50 pointer-events-none group-hover:pointer-events-auto p-3 leading-tight">
+                    <div className="absolute left-4  -top-1 h-[8px] w-[9px] rotate-45 overflow-hidden">
+                      {" "}
+                      <div className="h-3 w-3 relative bottom-[6.5px] right-1.5  bg-white/10 -rotate-45"></div>
+                    </div>
+                    {e.description}
+                  </div>
+                </div>
+              ))}{" "}
+            </div>
+          </div>
+        ))}
+      </section>
     </div>
   );
 };
