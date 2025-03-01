@@ -9,11 +9,9 @@ import { cn } from "@/lib/utils";
 const EmblaCarousel = ({
   images,
   className,
-  bg,
 }: {
   images: string[];
   className: string;
-  bg: string;
 }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: Math.floor(Math.random() * (4000 - 3000 + 1)) + 3000 }),

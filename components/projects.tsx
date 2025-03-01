@@ -3,7 +3,7 @@ import React from "react";
 
 import Reveal from "./animated-components/reveal";
 
-import { ProjectsData, Projects as Project } from "@/data";
+import { ProjectsData } from "@/data";
 import Link from "next/link";
 import ProjectCard from "./projectCard";
 import { FaArrowRight } from "react-icons/fa";

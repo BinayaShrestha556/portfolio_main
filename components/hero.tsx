@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="absolute right-[80%] -top-24 h-48 w-48 bg-neutral-500/10 z-1"></div>
         <h2 className="text-primary text-xl md:text-2xl lg:text-3xl font-bold">
           {" "}
-          Hello there! I'm -{" "}
+          Hello there! I&apos;m -{" "}
         </h2>
         <Reveal className="my-1">
           <h1 className=" text-8xl  font-bold tracking-tighter">

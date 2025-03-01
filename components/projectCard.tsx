@@ -22,7 +22,7 @@ const ProjectCard: React.FC<Projects> = (e) => {
       style={{ backgroundColor: bg }}
       className={`w-full m-auto flex flex-col rounded-[5px] p-1`}
     >
-      <EmblaCarousel className="h-80 w-full " bg={bg} images={e.images} />
+      <EmblaCarousel className="h-80 w-full " images={e.images} />
       <div className="w-full p-4 flex gap-3 flex-col justify-center ">
         <div className="flex gap-2 items-center justify-between">
           <h1 className="text-2xl font-bold">{e.name}</h1>
