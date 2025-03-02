@@ -14,7 +14,7 @@ const EmblaCarousel = ({
   className: string;
 }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: Math.floor(Math.random() * (4000 - 3000 + 1)) + 3000 }),
+    Autoplay({ delay: Math.floor(Math.random() * (5000 - 4000 + 1)) + 3000 }),
   ]);
 
   const scrollPrev = useCallback(() => {

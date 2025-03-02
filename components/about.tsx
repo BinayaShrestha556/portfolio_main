@@ -3,7 +3,11 @@ import Reveal from "./animated-components/reveal";
 
 import Orange from "./ui/orange";
 import Image from "next/image";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "About me",
+  description: "Everything about binaya shrestha",
+};
 const About = () => {
   return (
     <div id="aboutme" className="flex pt-10  p-2 items-center">
@@ -12,7 +16,7 @@ const About = () => {
           <Reveal className="my-4">
             <h1 className="-ml-1 text-2xl font-bold  ">🚀 ABOUT ME</h1>
           </Reveal>
-          <section className="text-left text-base md:text-lg text-muted-foreground lg:text-xl  w-full">
+          <section className="text-left text-base md:text-lg text-muted-foreground lg:text-2xl  w-full">
             Highly motivated and detail-oriented{" "}
             <Orange>Full-Stack Web Developer</Orange> with experience in
             designing, building, and deploying{" "}

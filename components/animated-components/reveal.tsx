@@ -21,6 +21,9 @@ const Reveal: React.FC<RevealProps> = ({ children, className }) => {
         variants={{ hidden: { left: 0 }, show: { left: "100%" } }}
         initial="hidden"
         whileInView={{ left: "100%" }}
+        viewport={{
+          once: true,
+        }}
         transition={{ duration: 0.4, delay: 0.3 }}
       ></motion.div>
     </div>

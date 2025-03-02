@@ -4,10 +4,16 @@ import Reveal from "./animated-components/reveal";
 import BigDescription from "./ui/bigDescription";
 import Image from "next/image";
 import dotted from "../public/26432.svg";
-import { Button } from "./ui/button";
+
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
+import FadeUp from "./animated-components/faade-up";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Binaya Shrestha",
+  description: "Landing page section for the site",
+};
 
 const Hero = () => {
   return (
@@ -26,13 +32,13 @@ const Hero = () => {
           Hello there! I&apos;m -{" "}
         </h2>
         <Reveal className="my-1">
-          <h1 className=" text-8xl  font-bold tracking-tighter">
+          <h1 className="text-5xl lg:text-8xl text-center  font-bold tracking-tighter">
             BINAYA SHRESTHA
           </h1>
         </Reveal>
       </div>
       <div className=" w-2/3 md:w-1/2 self-center flex flex-col items-center">
-        <BigDescription className="text-xl md:text-2xl lg:text-3xl my-4">
+        <BigDescription className="text-xl md:text-2xl lg:text-3xl lg:my-4 my-2">
           <h3>
             Full-Stack developer.{" "}
             <span className="text-muted-foreground">
@@ -42,34 +48,33 @@ const Hero = () => {
           </h3>
         </BigDescription>
         <div className="flex items-center gap-4 mt-4 justify-center">
-          <Link href="https://github.com/BinayaShrestha556">
-            <Button
-              variant="secondary"
-              className="font-bold text-base flex items-center rounded"
+          <FadeUp delay={0.05}>
+            <Link
+              href="https://github.com/BinayaShrestha556"
+              className="flex items-center gap-1 px-3 py-2 rounded  underline underline-offset-2 hover:text-primary transition"
             >
               <FaGithub color="#19e691" className="text-xl" />
               Github
-            </Button>
-          </Link>
-          <Link href="https://www.linkedin.com/in/binaya-shrestha-1b906a326">
-            {" "}
-            <Button
-              variant="secondary"
-              className="font-bold text-base flex items-center rounded"
+            </Link>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <Link
+              href="https://www.linkedin.com/in/binaya-shrestha-1b906a326"
+              className="items-center flex gap-1 px-3 py-2 rounded underline underline-offset-2 hover:text-primary transition"
             >
               <FaLinkedin color="#19e691" className="text-xl" />
               LinkedIn
-            </Button>
-          </Link>
-          <Link href="mailto:binayashrestha862@gmail.com">
-            <Button
-              variant="secondary"
-              className="font-bold text-base flex items-center rounded"
+            </Link>
+          </FadeUp>
+          <FadeUp delay={0.15}>
+            <Link
+              href="mailto:binayashrestha862@gmail.com"
+              className="flex items-center gap-1 px-3 py-2 rounded underline underline-offset-2 hover:text-primary transition"
             >
               <MdEmail color="#19e691" />
               Email
-            </Button>
-          </Link>
+            </Link>
+          </FadeUp>
         </div>
         <div className="relative self-end">
           <div className="absolute h-48 w-48 -right-14 -bottom-12 border-r-8  border-b-8 border-neutral-500/15"></div>

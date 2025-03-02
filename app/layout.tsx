@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import Navbar from "@/components/navbar";
-import Sidebar from "@/components/sidebar";
+
 import { Lato } from "next/font/google";
 import { ToastProvider } from "@/providers/toast-provider";
 import Footer from "@/components/footer";
@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={`${lato.className} antialiased`}>
         <Navbar />
         <ToastProvider />
-        <Sidebar />
+
         {children}
         <Footer />
       </body>
