@@ -157,12 +157,7 @@ export const TechStack: TechStacks[] = [
         description:
           "A powerful, open-source relational database known for its extensibility, reliability, and performance.",
       },
-      {
-        title: "Prisma",
-        icon: SiPrisma,
-        description:
-          "A modern database ORM for Node.js and TypeScript, providing type-safe and efficient queries.",
-      },
+
       {
         title: "MySQL",
         icon: SiMysql,
