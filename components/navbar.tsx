@@ -39,8 +39,9 @@ const Navbar = () => {
         <div className=" flex justify-end items-center">
           <Link
             href="#footer"
-            className=" hover:text-primary hover:underline transition text-white  underline-offset-2 "
+            className=" hover:text-primary group relative hover:underline transition text-white  underline-offset-2 "
           >
+            <div className="h-6 w-6 opacity-0 transition duration-300 group-hover:opacity-100 bg-primary/70 blur-lg  z-0  absolute"></div>
             <MdPermPhoneMsg size={25} />
           </Link>
         </div>
