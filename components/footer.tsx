@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 const Footer = () => {
   return (
-    <footer id="footer" className="w-full mt-20 bg-black/60 p-3">
+    <footer id="footer" className="w-full snap-start mt-20 bg-black/60 p-3">
       <div className="xl:w-[80%] p-3 flex flex-col md:flex-row justify-between items-center h-full mb-2 md:w-[90%] w-full mx-auto">
         <div>
           <h1 className="text-primary text-lg font-bold ">Contact me</h1>

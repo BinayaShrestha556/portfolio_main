@@ -8,16 +8,16 @@ import React from "react";
 const page = () => {
   return (
     <div className=" p-3 md:p-0">
-      <div className="w-full  h-screen flex items-center">
+      <div className="w-full snap-start  h-screen flex items-center">
         <Hero />
       </div>
-      <div className="w-full ">
+      <div className="w-full snap-start  ">
         <About />
       </div>
-      <div className="w-full mt-20">
+      <div className="w-full snap-start  mt-20">
         <TechStack />
       </div>
-      <div className="w-full mt-20">
+      <div className="w-full snap-start  mt-20">
         <Projects />
       </div>
     </div>
