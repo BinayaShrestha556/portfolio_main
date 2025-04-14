@@ -11,6 +11,7 @@ const ProjectCard: React.FC<Projects & { n?: 1 | 2 | 3 | 0 }> = (e) => {
     "hsla(319, 88%, 50%, 0.7)", // #9E0A56
     "hsla(226, 64%, 50%, 0.7)", // #1A2F79
     "hsla(164, 85%, 40%, 0.7)", // #0A845B
+    "hsla(226, 64%, 50%, 0.7)",
     "hsla(164, 85%, 50%, 0.7)", // #0A845B (same as above)
   ];
   const randomNum = Math.floor(Math.random() * 4);

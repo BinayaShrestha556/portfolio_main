@@ -18,9 +18,11 @@ import {
   SiPostgresql,
   SiMysql,
   SiMongodb,
+  SiSocketdotio,
 } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { FaNodeJs } from "react-icons/fa";
 
 export interface TechStacks {
   title: string;
@@ -220,44 +222,53 @@ export const ProjectsData: Projects[] = [
     ],
   },
   {
-    name: "Clothing Store",
+    name: "vibeWave - Real time chat app",
     description:
-      "A E-commerce website based on clothing store. Elegant design, responsive and interactive UI. Functional website, backend is the omni store, using it as cms. Made using Next.js shadcnui and other js libraries",
+      "A full stack real-time chat app built with TypeScript, Socket.IO, and PostgreSQL using Prisma ORM. It supports user authentication, conversation management, and live messaging. Each conversation operates as a dedicated room, enabling smooth and scalable real-time communication between users.",
     techStack: [
+      {
+        icon: SiExpress,
+        title: "Express js",
+      },
+      {
+        icon: FaNodeJs,
+        title: "Node js",
+      },
+      {
+        icon: SiPrisma,
+        title: "Prisma",
+      },
+      {
+        icon: SiPostgresql,
+        title: "PostgreSQL",
+      },
       {
         icon: RiNextjsFill,
         title: "Next.js",
-      },
-      {
-        icon: IoLogoJavascript,
-        title: "JavaScript",
       },
       {
         icon: SiTypescript,
         title: "TypeScript",
       },
       {
-        icon: SiZod,
-        title: "Zod",
+        icon: SiSocketdotio,
+        title: "Socket.io",
       },
       {
         icon: SiShadcnui,
-        title: "ShadcnUi",
+        title: "Shadcn",
       },
     ],
     images: [
-      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865666/uznssxiltyobosqtqys4.jpg",
-      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865664/nmfl2isuudrgvnolz4yd.png",
-      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865668/fnvs9ouq7bfyglfh6y2i.jpg",
-      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865664/kxrhjcy4je7bxwwbgdja.png",
-      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865666/fko8q4vqh5nenblmyrp2.png",
-      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865664/vtz8o2qfqexoags2j0vh.png",
-      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865664/srznqhkulmvg7kwk6ewa.png",
-      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865664/yaurdib003b0su0h0qcn.png",
+      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1744604887/Screenshot_2025-04-14_101225_esyt0q.png",
+      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1744604887/Screenshot_2025-04-14_101039_luyrm8.png",
+      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1744604889/Screenshot_2025-04-14_101115_zrkmi1.png",
     ],
-    github: "https://github.com/BinayaShrestha556/e-commerce-new",
-    liveUrl: "https://clothingstorez.vercel.app",
+    github_front: "https://github.com/BinayaShrestha556/chat-app-frontend",
+    github_back: "https://github.com/BinayaShrestha556/chat-app-backend-2",
+    liveUrl: "https://chat-vibe-wave.vercel.app",
   },
+
   {
     name: "NewTube",
     techStack: [
@@ -303,5 +314,44 @@ export const ProjectsData: Projects[] = [
     github_front: "https://github.com/BinayaShrestha556/Newtube_frontend",
     github_back: "https://github.com/BinayaShrestha556/backend_project",
     liveUrl: "https://newtubebybinaya.vercel.app",
+  },
+  {
+    name: "Clothing Store",
+    description:
+      "A E-commerce website based on clothing store. Elegant design, responsive and interactive UI. Functional website, backend is the omni store, using it as cms. Made using Next.js shadcnui and other js libraries",
+    techStack: [
+      {
+        icon: RiNextjsFill,
+        title: "Next.js",
+      },
+      {
+        icon: IoLogoJavascript,
+        title: "JavaScript",
+      },
+      {
+        icon: SiTypescript,
+        title: "TypeScript",
+      },
+      {
+        icon: SiZod,
+        title: "Zod",
+      },
+      {
+        icon: SiShadcnui,
+        title: "ShadcnUi",
+      },
+    ],
+    images: [
+      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865666/uznssxiltyobosqtqys4.jpg",
+      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865664/nmfl2isuudrgvnolz4yd.png",
+      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865668/fnvs9ouq7bfyglfh6y2i.jpg",
+      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865664/kxrhjcy4je7bxwwbgdja.png",
+      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865666/fko8q4vqh5nenblmyrp2.png",
+      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865664/vtz8o2qfqexoags2j0vh.png",
+      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865664/srznqhkulmvg7kwk6ewa.png",
+      "https://res.cloudinary.com/dtnzu6ts5/image/upload/v1739865664/yaurdib003b0su0h0qcn.png",
+    ],
+    github: "https://github.com/BinayaShrestha556/e-commerce-new",
+    liveUrl: "https://clothingstorez.vercel.app",
   },
 ];

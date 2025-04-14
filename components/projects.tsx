@@ -21,7 +21,7 @@ const Projects = async () => {
     >
       <div className=" w-full"></div>
       <div className="flex flex-col lg:flex-row w-full items-stretch gap-5 lg:gap-20">
-        <div className="flex flex-col flex-1 relative justify-center">
+        <div className="flex flex-col flex-1 relative justify-center mt-10">
           <Reveal className="justify-self-start lg:absolute mb-5  lg:top-10 lg:left-10 lg:-mb-24">
             <h1 className=" text-4xl font-bold">PROJECTS</h1>
             <span className="flex items-center gap-2">
@@ -31,19 +31,34 @@ const Projects = async () => {
               <FaArrowRight size={22} className="text-primary" />
             </span>
           </Reveal>
-          <FadeUp delay={0.25}>
-            <ProjectCard
-              n={0}
-              description={ProjectsData[1].description}
-              images={ProjectsData[1].images}
-              name={ProjectsData[1].name}
-              techStack={ProjectsData[1].techStack}
-              github={ProjectsData[1].github}
-              liveUrl={ProjectsData[1].liveUrl}
-              github_back={ProjectsData[1].github_back}
-              github_front={ProjectsData[1].github_front}
-            />
-          </FadeUp>
+          <div className="flex flex-col flex-1 gap-5 mt-5 lg:mt-[60%] lg:gap-20">
+            <FadeUp delay={0.25}>
+              <ProjectCard
+                n={0}
+                description={ProjectsData[1].description}
+                images={ProjectsData[1].images}
+                name={ProjectsData[1].name}
+                techStack={ProjectsData[1].techStack}
+                github={ProjectsData[1].github}
+                liveUrl={ProjectsData[1].liveUrl}
+                github_back={ProjectsData[1].github_back}
+                github_front={ProjectsData[1].github_front}
+              />
+            </FadeUp>
+            <FadeUp delay={0.25}>
+              <ProjectCard
+                n={3}
+                description={ProjectsData[3].description}
+                images={ProjectsData[3].images}
+                name={ProjectsData[3].name}
+                techStack={ProjectsData[3].techStack}
+                github={ProjectsData[3].github}
+                liveUrl={ProjectsData[3].liveUrl}
+                github_back={ProjectsData[3].github_back}
+                github_front={ProjectsData[3].github_front}
+              />
+            </FadeUp>
+          </div>
         </div>
         <div className="flex flex-col flex-1 gap-5 lg:gap-20">
           <FadeUp delay={0.25}>

@@ -40,9 +40,7 @@ body {
     width:100%;
     scroll-behavior: smooth;
   }
-  html{
-    scroll-snap-type: y mandatory;
-  }
+
   @layer base {
   :root {
     --background:180 2% 7%;
