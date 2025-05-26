@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
-import Autoplay from "embla-carousel-autoplay";
+
 import { cn } from "@/lib/utils";
 
 const EmblaCarousel = ({
