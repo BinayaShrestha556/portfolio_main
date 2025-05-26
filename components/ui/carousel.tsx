@@ -13,9 +13,11 @@ const EmblaCarousel = ({
   images: string[];
   className: string;
 }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: Math.floor(Math.random() * (5000 - 4000 + 1)) + 3000 }),
-  ]);
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true }
+    // [Autoplay({ delay: Math.floor(Math.random() * 4000) + 2000 })]
+    //for auto play turn this on
+  );
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -54,16 +56,19 @@ const EmblaCarousel = ({
         </div>
       </div>
       <button
-        className="embla__prev absolute top-1/2 bottom-1/2 left-3 text-neutral-500 text-3xl"
+        className="embla__prev absolute top-1/2 bottom-1/2 left-3 text-neutral-400/80 backdrop-blur-sm text-3xl"
         onClick={scrollPrev}
       >
         <FaCircleChevronLeft />
       </button>
       <button
-        className="embla__next absolute top-1/2 bottom-1/2 right-3 text-3xl text-neutral-500/50"
+        className="embla__next absolute top-1/2 bottom-1/2 backdrop-blur-sm right-3 text-3xl text-neutral-400/80"
         onClick={scrollNext}
       >
-        <FaCircleChevronRight />
+        <FaCircleChevronRight
+          style={{ animationDuration: "4000" }}
+          className="animate-pulse backdrop-blur-lg"
+        />
       </button>
     </div>
   );

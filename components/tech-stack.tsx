@@ -23,7 +23,7 @@ const TechStack = () => {
             <h2 className="my-3 font-bold">{e.title}</h2>
             <ul className="flex gap-4 items-center justify-center flex-wrap ">
               {e.techStack.map((e, i) => (
-                <FadeUp key={e.title} delay={mi * 0.08 + i * 0.08}>
+                <FadeUp key={e.title} delay={mi * 0.02 + i * 0.08}>
                   <li className="flex group gap-1 lg:gap-2 border-border rounded hover:bg-primary  transition hover:text-black bg-secondary px-2.5 py-1.5 text-sm lg:px-3.5 lg:py-2.5 lg:text-base font-semibold relative cursor-pointer">
                     <e.icon className=" w-5 h-5 lg:w-6 lg:h-6 text-primary duration-300 transition group-hover:text-black" />
                     {e.title}

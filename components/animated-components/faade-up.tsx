@@ -20,7 +20,7 @@ const FadeUp = ({
       y: 0,
       transition: {
         delay: custom,
-        duration: 0.5, // You can adjust this
+        duration: 0.25, // You can adjust this
         ease: "easeOut",
       },
     }),
